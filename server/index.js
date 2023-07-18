@@ -1,13 +1,20 @@
-import express from "express"
-const app = express();
+// index.js
+const express = require('express')
 
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
+const app = express()
+const PORT = 4000
 
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `)
+})
+
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
+app.get('/about', (req, res) => {
+  res.send('This is my about route..... ')
+})
 
 // Export the Express API
-module.exports = app;
+module.exports = app
