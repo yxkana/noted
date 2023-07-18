@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/proxy/:notes*",
+        "destination": "https://noted-api.vercel.app/:notes*"
+      }
+    ]
+  }
