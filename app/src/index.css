@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+
+	
+
+
+
+	.sidebar-icon{
+		@apply relative flex items-center justify-center mt-2 mb-2 mx-auto shadow-lg p-3
+		bg-color-tercelary text-color-whitesh hover:bg-color-tercelary2 rounded-3xl hover:rounded-xl
+		transition-all duration-200 ease-in
+	}
+
+	.sidebar-icon-active{
+		@apply relative flex items-center justify-center mt-2 mb-2 mx-auto shadow-lg p-3
+		bg-color-tercelary2 text-color-whitesh hover:bg-color-tercelary2 rounded-3xl hover:rounded-xl
+		transition-all duration-200 ease-in
+	}
+
+	.sidebar-tooltip{
+		@apply absolute left-[110px] p-5 bg-color-tercelary2 rounded-[15px] shadow-md text-sm font-bold transition-all duration-100 scale-0 origin-left;
+	}
+
+	.login-input{
+		@apply bg-color-white rounded-lg h-9 text-base px-4 my-3 outline-color-tercelary text-color-primary shadow-[inset_0px_0px_3px_3px_rgba(255,255,255)]
+	}
+
+	.rightBookPage{
+		@apply absolute mr-2 rounded-r-[25px] rounded-l-[10px] left-[50%] w-[400px] h-[513px]  bg-color-whitesh origin-[-2px] border-color-white shadow-[inset_30px_0px_48px_-11px_rgba(0,0,0,0.1)]
+	}
+
+	.white_pages{
+		@apply absolute rounded-r-[25px]  rounded-l-[5px] left-[50%] w-[395px] h-[505px] bg-color-whitesh origin-[-5px] shadow-[inset_30px_0px_53px_-4px_rgba(0,0,0,0.1)]
+	}
+
+
+	/* Auth Screen */
+
+
+
+
+}
+
+
+
+.book_flip{
+	transform: rotateX(-10deg) rotateY(180deg);
+	transition: all 1s;
+	z-index: 1;
+}
+
+.page_flip{
+	transform: rotateX(-10deg) rotateY(180deg);
+} 
+
+.lastPage_flip{
+	transform: rotateX(-10deg) rotateY(180deg) !important;
+	transition: all 2.5s !important;
+	z-index: 8;
+}
+
+.lastPage_flipBack{
+	transform: rotateX(-10deg) rotateY(0deg);
+	transition: all 1s;
+	z-index: 1;
+}
+
+.lastPage_flipReverse{
+	transform: rotateX(-10deg) rotateY(0deg);
+	transition: all 2.5s;
+	z-index: 10;
+}
+.login_shadow{
+	box-shadow: 0px 0px 68px 31px rgba(0,0,0,0.1);
+}
+
+.backface{
+	backface-visibility: hidden;
+}
+
+
+div::-webkit-scrollbar{
+	width: 5px;
+	height: 5px;
+	
+}
+
+.tags::-webkit-scrollbar{
+	height: 3px;
+}
+
+div::-webkit-scrollbar-track {
+	background: #F9F5EB;
+}
+
+/* Handle */
+div::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+div:hover::-webkit-scrollbar-thumb {
+	background: #A27B5C;
+}
+
+.notesScrollBar{
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.notesScrollBar:hover{
+	visibility: visible;
+}
+
+.label{
+	text-transform: none;
+}
+
+/* Change style of find friend field */
+/*  .MuiOutlinedInput-notchedOutline {
+	border-color: #dd7421 !important;
+  }
+
+ */
+
+
+
+
+
+
+ 
