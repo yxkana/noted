@@ -99,6 +99,13 @@ const PROJECT = mongoose.model("PROJECT", projectSchema);
 
 
 
-app.listen("5000", function () {
-  console.log("connect succ.");
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
 });
+
+app.listen(5000, () => {
+  console.log("Running on port 5000.");
+});
+
+
+module.exports = app;
