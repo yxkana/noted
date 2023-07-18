@@ -45,10 +45,7 @@ const verifyJWT = (req, res, next) => {
   });
 };
 
-/* const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-app.use(express.static(__dirname + "/")); */
-console.log("sss");
+
 mongoose.connect("mongodb+srv://kavalekdaniel01:"+process.env.DB_PASSWORD+"@cluster0.xwtmbma.mongodb.net/?retryWrites=true&w=majority");
 
 const noteSchema = new Schema({
@@ -118,6 +115,10 @@ app.post("/notes/register", async (req, res) => {
     res.send(err);
   }
 });
+
+app.get("/notes/",(req,res)=>{
+  res.send("Its working on vercel");
+})
 
 /* app.get("/notes/test", (req,res)=>{
 	const _identity = uniqueString();
@@ -367,7 +368,7 @@ app.patch("/notes/movetocomplete", async (req, res) => {
 
 //DashBoard => UserTab => Functions
 /* ---------------------------------------- Start ---------------------------------------- */
-app.get("/notes/gg",(req,res)=>{
+app.get("/",(req,res)=>{
   res.send("Yooo");
 })
 
@@ -632,7 +633,7 @@ app.post("/notes/sendTask", async (req, res) => {
   }
 });
 
-app.listen("5000", function () {
+app.listen("4000", function () {
   console.log("connect succ.");
 });
 
