@@ -367,6 +367,11 @@ app.patch("/notes/movetocomplete", async (req, res) => {
 
 //DashBoard => UserTab => Functions
 /* ---------------------------------------- Start ---------------------------------------- */
+app.get("/notes/gg",(req,res)=>{
+  res.send("Yooo");
+})
+
+
 
 app.get("/notes/getuserinfo", async (req, res) => {
   const cookies = req.cookies;
